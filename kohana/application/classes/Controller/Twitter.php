@@ -19,10 +19,10 @@ class Controller_Twitter extends Controller {
 		$response = $twitter->setGetfield($getfield)
                              ->buildOauth($url, $requestMethod)
                              ->performRequest();
-		var_dump(json_decode($response));
-		
-		$view = new View('twitter/index');
-		
-		$this->response->body($view, $response);		
+						
+		$view = View::factory('twitter/index')
+			->set('response', $response);			
+						
+		$this->response->body($view);		
 	}
 }
