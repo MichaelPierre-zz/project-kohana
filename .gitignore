@@ -2,4 +2,4 @@ application/cache/*
 application/logs/*
 application/classes/Controller/test.php
 application/views/test/test.php
-application/config/*
+application/config/twitter-config.php
